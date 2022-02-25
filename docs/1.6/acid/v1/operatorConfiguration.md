@@ -26,6 +26,7 @@ permalink: /1.6/acid/v1/operatorConfiguration/
   * [`fn withSidecar_docker_images(sidecar_docker_images)`](#fn-configurationwithsidecar_docker_images)
   * [`fn withSidecar_docker_imagesMixin(sidecar_docker_images)`](#fn-configurationwithsidecar_docker_imagesmixin)
   * [`fn withSidecars(sidecars)`](#fn-configurationwithsidecars)
+  * [`fn withSidecarsMixin(sidecars)`](#fn-configurationwithsidecarsmixin)
   * [`fn withWorkers(workers)`](#fn-configurationwithworkers)
   * [`obj configuration.aws_or_gcp`](#obj-configurationaws_or_gcp)
     * [`fn withAdditional_secret_mount(additional_secret_mount)`](#fn-configurationaws_or_gcpwithadditional_secret_mount)
@@ -71,6 +72,7 @@ permalink: /1.6/acid/v1/operatorConfiguration/
     * [`fn withEnable_sidecars(enable_sidecars)`](#fn-configurationkuberneteswithenable_sidecars)
     * [`fn withInfrastructure_roles_secret_name(infrastructure_roles_secret_name)`](#fn-configurationkuberneteswithinfrastructure_roles_secret_name)
     * [`fn withInfrastructure_roles_secrets(infrastructure_roles_secrets)`](#fn-configurationkuberneteswithinfrastructure_roles_secrets)
+    * [`fn withInfrastructure_roles_secretsMixin(infrastructure_roles_secrets)`](#fn-configurationkuberneteswithinfrastructure_roles_secretsmixin)
     * [`fn withInherited_annotations(inherited_annotations)`](#fn-configurationkuberneteswithinherited_annotations)
     * [`fn withInherited_annotationsMixin(inherited_annotations)`](#fn-configurationkuberneteswithinherited_annotationsmixin)
     * [`fn withInherited_labels(inherited_labels)`](#fn-configurationkuberneteswithinherited_labels)
@@ -338,6 +340,16 @@ withSidecars(sidecars)
 ```
 
 
+
+### fn configuration.withSidecarsMixin
+
+```ts
+withSidecarsMixin(sidecars)
+```
+
+
+
+**Note:** This function appends passed data to existing values
 
 ### fn configuration.withWorkers
 
@@ -690,6 +702,16 @@ withInfrastructure_roles_secrets(infrastructure_roles_secrets)
 ```
 
 
+
+### fn configuration.kubernetes.withInfrastructure_roles_secretsMixin
+
+```ts
+withInfrastructure_roles_secretsMixin(infrastructure_roles_secrets)
+```
+
+
+
+**Note:** This function appends passed data to existing values
 
 ### fn configuration.kubernetes.withInherited_annotations
 

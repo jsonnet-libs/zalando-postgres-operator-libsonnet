@@ -35,6 +35,7 @@ permalink: /1.7/acid/v1/postgresql/
   * [`fn withAdditionalVolumes(additionalVolumes)`](#fn-specwithadditionalvolumes)
   * [`fn withAdditionalVolumesMixin(additionalVolumes)`](#fn-specwithadditionalvolumesmixin)
   * [`fn withAllowedSourceRanges(allowedSourceRanges)`](#fn-specwithallowedsourceranges)
+  * [`fn withAllowedSourceRangesMixin(allowedSourceRanges)`](#fn-specwithallowedsourcerangesmixin)
   * [`fn withDatabases(databases)`](#fn-specwithdatabases)
   * [`fn withDatabasesMixin(databases)`](#fn-specwithdatabasesmixin)
   * [`fn withDockerImage(dockerImage)`](#fn-specwithdockerimage)
@@ -45,7 +46,9 @@ permalink: /1.7/acid/v1/postgresql/
   * [`fn withEnableReplicaLoadBalancer(enableReplicaLoadBalancer)`](#fn-specwithenablereplicaloadbalancer)
   * [`fn withEnableShmVolume(enableShmVolume)`](#fn-specwithenableshmvolume)
   * [`fn withInitContainers(initContainers)`](#fn-specwithinitcontainers)
+  * [`fn withInitContainersMixin(initContainers)`](#fn-specwithinitcontainersmixin)
   * [`fn withInit_containers(init_containers)`](#fn-specwithinit_containers)
+  * [`fn withInit_containersMixin(init_containers)`](#fn-specwithinit_containersmixin)
   * [`fn withLogicalBackupSchedule(logicalBackupSchedule)`](#fn-specwithlogicalbackupschedule)
   * [`fn withMaintenanceWindows(maintenanceWindows)`](#fn-specwithmaintenancewindows)
   * [`fn withMaintenanceWindowsMixin(maintenanceWindows)`](#fn-specwithmaintenancewindowsmixin)
@@ -61,6 +64,7 @@ permalink: /1.7/acid/v1/postgresql/
   * [`fn withServiceAnnotations(serviceAnnotations)`](#fn-specwithserviceannotations)
   * [`fn withServiceAnnotationsMixin(serviceAnnotations)`](#fn-specwithserviceannotationsmixin)
   * [`fn withSidecars(sidecars)`](#fn-specwithsidecars)
+  * [`fn withSidecarsMixin(sidecars)`](#fn-specwithsidecarsmixin)
   * [`fn withSpiloFSGroup(spiloFSGroup)`](#fn-specwithspilofsgroup)
   * [`fn withSpiloRunAsGroup(spiloRunAsGroup)`](#fn-specwithspilorunasgroup)
   * [`fn withSpiloRunAsUser(spiloRunAsUser)`](#fn-specwithspilorunasuser)
@@ -365,6 +369,16 @@ withAllowedSourceRanges(allowedSourceRanges)
 
 
 
+### fn spec.withAllowedSourceRangesMixin
+
+```ts
+withAllowedSourceRangesMixin(allowedSourceRanges)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.withDatabases
 
 ```ts
@@ -447,6 +461,16 @@ withInitContainers(initContainers)
 
 
 
+### fn spec.withInitContainersMixin
+
+```ts
+withInitContainersMixin(initContainers)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.withInit_containers
 
 ```ts
@@ -454,6 +478,16 @@ withInit_containers(init_containers)
 ```
 
 
+
+### fn spec.withInit_containersMixin
+
+```ts
+withInit_containersMixin(init_containers)
+```
+
+
+
+**Note:** This function appends passed data to existing values
 
 ### fn spec.withLogicalBackupSchedule
 
@@ -582,6 +616,16 @@ withSidecars(sidecars)
 ```
 
 
+
+### fn spec.withSidecarsMixin
+
+```ts
+withSidecarsMixin(sidecars)
+```
+
+
+
+**Note:** This function appends passed data to existing values
 
 ### fn spec.withSpiloFSGroup
 
