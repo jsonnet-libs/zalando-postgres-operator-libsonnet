@@ -102,6 +102,15 @@ permalink: /1.6/acid/v1/operatorConfiguration/
     * [`fn withToleration(toleration)`](#fn-configurationkuberneteswithtoleration)
     * [`fn withTolerationMixin(toleration)`](#fn-configurationkuberneteswithtolerationmixin)
     * [`fn withWatched_namespace(watched_namespace)`](#fn-configurationkuberneteswithwatched_namespace)
+    * [`obj configuration.kubernetes.infrastructure_roles_secrets`](#obj-configurationkubernetesinfrastructure_roles_secrets)
+      * [`fn withDefaultrolevalue(defaultrolevalue)`](#fn-configurationkubernetesinfrastructure_roles_secretswithdefaultrolevalue)
+      * [`fn withDefaultuservalue(defaultuservalue)`](#fn-configurationkubernetesinfrastructure_roles_secretswithdefaultuservalue)
+      * [`fn withDetails(details)`](#fn-configurationkubernetesinfrastructure_roles_secretswithdetails)
+      * [`fn withPasswordkey(passwordkey)`](#fn-configurationkubernetesinfrastructure_roles_secretswithpasswordkey)
+      * [`fn withRolekey(rolekey)`](#fn-configurationkubernetesinfrastructure_roles_secretswithrolekey)
+      * [`fn withSecretname(secretname)`](#fn-configurationkubernetesinfrastructure_roles_secretswithsecretname)
+      * [`fn withTemplate(template)`](#fn-configurationkubernetesinfrastructure_roles_secretswithtemplate)
+      * [`fn withUserkey(userkey)`](#fn-configurationkubernetesinfrastructure_roles_secretswithuserkey)
   * [`obj configuration.load_balancer`](#obj-configurationload_balancer)
     * [`fn withCustom_service_annotations(custom_service_annotations)`](#fn-configurationload_balancerwithcustom_service_annotations)
     * [`fn withCustom_service_annotationsMixin(custom_service_annotations)`](#fn-configurationload_balancerwithcustom_service_annotationsmixin)
@@ -187,8 +196,6 @@ permalink: /1.6/acid/v1/operatorConfiguration/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -953,6 +960,74 @@ withWatched_namespace(watched_namespace)
 
 
 
+## obj configuration.kubernetes.infrastructure_roles_secrets
+
+
+
+### fn configuration.kubernetes.infrastructure_roles_secrets.withDefaultrolevalue
+
+```ts
+withDefaultrolevalue(defaultrolevalue)
+```
+
+
+
+### fn configuration.kubernetes.infrastructure_roles_secrets.withDefaultuservalue
+
+```ts
+withDefaultuservalue(defaultuservalue)
+```
+
+
+
+### fn configuration.kubernetes.infrastructure_roles_secrets.withDetails
+
+```ts
+withDetails(details)
+```
+
+
+
+### fn configuration.kubernetes.infrastructure_roles_secrets.withPasswordkey
+
+```ts
+withPasswordkey(passwordkey)
+```
+
+
+
+### fn configuration.kubernetes.infrastructure_roles_secrets.withRolekey
+
+```ts
+withRolekey(rolekey)
+```
+
+
+
+### fn configuration.kubernetes.infrastructure_roles_secrets.withSecretname
+
+```ts
+withSecretname(secretname)
+```
+
+
+
+### fn configuration.kubernetes.infrastructure_roles_secrets.withTemplate
+
+```ts
+withTemplate(template)
+```
+
+
+
+### fn configuration.kubernetes.infrastructure_roles_secrets.withUserkey
+
+```ts
+withUserkey(userkey)
+```
+
+
+
 ## obj configuration.load_balancer
 
 
@@ -1604,24 +1679,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 

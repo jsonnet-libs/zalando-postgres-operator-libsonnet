@@ -22,8 +22,6 @@ permalink: /1.6/acid/v1/postgresql/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -74,6 +72,14 @@ permalink: /1.6/acid/v1/postgresql/
   * [`fn withUseLoadBalancer(useLoadBalancer)`](#fn-specwithuseloadbalancer)
   * [`fn withUsers(users)`](#fn-specwithusers)
   * [`fn withUsersMixin(users)`](#fn-specwithusersmixin)
+  * [`obj spec.additionalVolumes`](#obj-specadditionalvolumes)
+    * [`fn withMountPath(mountPath)`](#fn-specadditionalvolumeswithmountpath)
+    * [`fn withName(name)`](#fn-specadditionalvolumeswithname)
+    * [`fn withSubPath(subPath)`](#fn-specadditionalvolumeswithsubpath)
+    * [`fn withTargetContainers(targetContainers)`](#fn-specadditionalvolumeswithtargetcontainers)
+    * [`fn withTargetContainersMixin(targetContainers)`](#fn-specadditionalvolumeswithtargetcontainersmixin)
+    * [`fn withVolumeSource(volumeSource)`](#fn-specadditionalvolumeswithvolumesource)
+    * [`fn withVolumeSourceMixin(volumeSource)`](#fn-specadditionalvolumeswithvolumesourcemixin)
   * [`obj spec.clone`](#obj-specclone)
     * [`fn withCluster(cluster)`](#fn-specclonewithcluster)
     * [`fn withS3_access_key_id(s3_access_key_id)`](#fn-specclonewiths3_access_key_id)
@@ -100,9 +106,41 @@ permalink: /1.6/acid/v1/postgresql/
   * [`obj spec.nodeAffinity`](#obj-specnodeaffinity)
     * [`fn withPreferredDuringSchedulingIgnoredDuringExecution(preferredDuringSchedulingIgnoredDuringExecution)`](#fn-specnodeaffinitywithpreferredduringschedulingignoredduringexecution)
     * [`fn withPreferredDuringSchedulingIgnoredDuringExecutionMixin(preferredDuringSchedulingIgnoredDuringExecution)`](#fn-specnodeaffinitywithpreferredduringschedulingignoredduringexecutionmixin)
+    * [`obj spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution`](#obj-specnodeaffinitypreferredduringschedulingignoredduringexecution)
+      * [`fn withWeight(weight)`](#fn-specnodeaffinitypreferredduringschedulingignoredduringexecutionwithweight)
+      * [`obj spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference`](#obj-specnodeaffinitypreferredduringschedulingignoredduringexecutionpreference)
+        * [`fn withMatchExpressions(matchExpressions)`](#fn-specnodeaffinitypreferredduringschedulingignoredduringexecutionpreferencewithmatchexpressions)
+        * [`fn withMatchExpressionsMixin(matchExpressions)`](#fn-specnodeaffinitypreferredduringschedulingignoredduringexecutionpreferencewithmatchexpressionsmixin)
+        * [`fn withMatchFields(matchFields)`](#fn-specnodeaffinitypreferredduringschedulingignoredduringexecutionpreferencewithmatchfields)
+        * [`fn withMatchFieldsMixin(matchFields)`](#fn-specnodeaffinitypreferredduringschedulingignoredduringexecutionpreferencewithmatchfieldsmixin)
+        * [`obj spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchExpressions`](#obj-specnodeaffinitypreferredduringschedulingignoredduringexecutionpreferencematchexpressions)
+          * [`fn withKey(key)`](#fn-specnodeaffinitypreferredduringschedulingignoredduringexecutionpreferencematchexpressionswithkey)
+          * [`fn withOperator(operator)`](#fn-specnodeaffinitypreferredduringschedulingignoredduringexecutionpreferencematchexpressionswithoperator)
+          * [`fn withValues(values)`](#fn-specnodeaffinitypreferredduringschedulingignoredduringexecutionpreferencematchexpressionswithvalues)
+          * [`fn withValuesMixin(values)`](#fn-specnodeaffinitypreferredduringschedulingignoredduringexecutionpreferencematchexpressionswithvaluesmixin)
+        * [`obj spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchFields`](#obj-specnodeaffinitypreferredduringschedulingignoredduringexecutionpreferencematchfields)
+          * [`fn withKey(key)`](#fn-specnodeaffinitypreferredduringschedulingignoredduringexecutionpreferencematchfieldswithkey)
+          * [`fn withOperator(operator)`](#fn-specnodeaffinitypreferredduringschedulingignoredduringexecutionpreferencematchfieldswithoperator)
+          * [`fn withValues(values)`](#fn-specnodeaffinitypreferredduringschedulingignoredduringexecutionpreferencematchfieldswithvalues)
+          * [`fn withValuesMixin(values)`](#fn-specnodeaffinitypreferredduringschedulingignoredduringexecutionpreferencematchfieldswithvaluesmixin)
     * [`obj spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution`](#obj-specnodeaffinityrequiredduringschedulingignoredduringexecution)
       * [`fn withNodeSelectorTerms(nodeSelectorTerms)`](#fn-specnodeaffinityrequiredduringschedulingignoredduringexecutionwithnodeselectorterms)
       * [`fn withNodeSelectorTermsMixin(nodeSelectorTerms)`](#fn-specnodeaffinityrequiredduringschedulingignoredduringexecutionwithnodeselectortermsmixin)
+      * [`obj spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms`](#obj-specnodeaffinityrequiredduringschedulingignoredduringexecutionnodeselectorterms)
+        * [`fn withMatchExpressions(matchExpressions)`](#fn-specnodeaffinityrequiredduringschedulingignoredduringexecutionnodeselectortermswithmatchexpressions)
+        * [`fn withMatchExpressionsMixin(matchExpressions)`](#fn-specnodeaffinityrequiredduringschedulingignoredduringexecutionnodeselectortermswithmatchexpressionsmixin)
+        * [`fn withMatchFields(matchFields)`](#fn-specnodeaffinityrequiredduringschedulingignoredduringexecutionnodeselectortermswithmatchfields)
+        * [`fn withMatchFieldsMixin(matchFields)`](#fn-specnodeaffinityrequiredduringschedulingignoredduringexecutionnodeselectortermswithmatchfieldsmixin)
+        * [`obj spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchExpressions`](#obj-specnodeaffinityrequiredduringschedulingignoredduringexecutionnodeselectortermsmatchexpressions)
+          * [`fn withKey(key)`](#fn-specnodeaffinityrequiredduringschedulingignoredduringexecutionnodeselectortermsmatchexpressionswithkey)
+          * [`fn withOperator(operator)`](#fn-specnodeaffinityrequiredduringschedulingignoredduringexecutionnodeselectortermsmatchexpressionswithoperator)
+          * [`fn withValues(values)`](#fn-specnodeaffinityrequiredduringschedulingignoredduringexecutionnodeselectortermsmatchexpressionswithvalues)
+          * [`fn withValuesMixin(values)`](#fn-specnodeaffinityrequiredduringschedulingignoredduringexecutionnodeselectortermsmatchexpressionswithvaluesmixin)
+        * [`obj spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchFields`](#obj-specnodeaffinityrequiredduringschedulingignoredduringexecutionnodeselectortermsmatchfields)
+          * [`fn withKey(key)`](#fn-specnodeaffinityrequiredduringschedulingignoredduringexecutionnodeselectortermsmatchfieldswithkey)
+          * [`fn withOperator(operator)`](#fn-specnodeaffinityrequiredduringschedulingignoredduringexecutionnodeselectortermsmatchfieldswithoperator)
+          * [`fn withValues(values)`](#fn-specnodeaffinityrequiredduringschedulingignoredduringexecutionnodeselectortermsmatchfieldswithvalues)
+          * [`fn withValuesMixin(values)`](#fn-specnodeaffinityrequiredduringschedulingignoredduringexecutionnodeselectortermsmatchfieldswithvaluesmixin)
   * [`obj spec.patroni`](#obj-specpatroni)
     * [`fn withInitdb(initdb)`](#fn-specpatroniwithinitdb)
     * [`fn withInitdbMixin(initdb)`](#fn-specpatroniwithinitdbmixin)
@@ -135,6 +173,12 @@ permalink: /1.6/acid/v1/postgresql/
     * [`fn withCertificateFile(certificateFile)`](#fn-spectlswithcertificatefile)
     * [`fn withPrivateKeyFile(privateKeyFile)`](#fn-spectlswithprivatekeyfile)
     * [`fn withSecretName(secretName)`](#fn-spectlswithsecretname)
+  * [`obj spec.tolerations`](#obj-spectolerations)
+    * [`fn withEffect(effect)`](#fn-spectolerationswitheffect)
+    * [`fn withKey(key)`](#fn-spectolerationswithkey)
+    * [`fn withOperator(operator)`](#fn-spectolerationswithoperator)
+    * [`fn withTolerationSeconds(tolerationSeconds)`](#fn-spectolerationswithtolerationseconds)
+    * [`fn withValue(value)`](#fn-spectolerationswithvalue)
   * [`obj spec.volume`](#obj-specvolume)
     * [`fn withIops(iops)`](#fn-specvolumewithiops)
     * [`fn withSize(size)`](#fn-specvolumewithsize)
@@ -255,24 +299,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -698,6 +724,70 @@ withUsersMixin(users)
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.additionalVolumes
+
+
+
+### fn spec.additionalVolumes.withMountPath
+
+```ts
+withMountPath(mountPath)
+```
+
+
+
+### fn spec.additionalVolumes.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.additionalVolumes.withSubPath
+
+```ts
+withSubPath(subPath)
+```
+
+
+
+### fn spec.additionalVolumes.withTargetContainers
+
+```ts
+withTargetContainers(targetContainers)
+```
+
+
+
+### fn spec.additionalVolumes.withTargetContainersMixin
+
+```ts
+withTargetContainersMixin(targetContainers)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.additionalVolumes.withVolumeSource
+
+```ts
+withVolumeSource(volumeSource)
+```
+
+
+
+### fn spec.additionalVolumes.withVolumeSourceMixin
+
+```ts
+withVolumeSourceMixin(volumeSource)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.clone
 
 
@@ -884,6 +974,134 @@ withPreferredDuringSchedulingIgnoredDuringExecutionMixin(preferredDuringScheduli
 
 **Note:** This function appends passed data to existing values
 
+## obj spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution
+
+
+
+### fn spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.withWeight
+
+```ts
+withWeight(weight)
+```
+
+
+
+## obj spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference
+
+
+
+### fn spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.withMatchExpressions
+
+```ts
+withMatchExpressions(matchExpressions)
+```
+
+
+
+### fn spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.withMatchExpressionsMixin
+
+```ts
+withMatchExpressionsMixin(matchExpressions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.withMatchFields
+
+```ts
+withMatchFields(matchFields)
+```
+
+
+
+### fn spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.withMatchFieldsMixin
+
+```ts
+withMatchFieldsMixin(matchFields)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchExpressions
+
+
+
+### fn spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchExpressions.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchExpressions.withOperator
+
+```ts
+withOperator(operator)
+```
+
+
+
+### fn spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchExpressions.withValues
+
+```ts
+withValues(values)
+```
+
+
+
+### fn spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchExpressions.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchFields
+
+
+
+### fn spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchFields.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchFields.withOperator
+
+```ts
+withOperator(operator)
+```
+
+
+
+### fn spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchFields.withValues
+
+```ts
+withValues(values)
+```
+
+
+
+### fn spec.nodeAffinity.preferredDuringSchedulingIgnoredDuringExecution.preference.matchFields.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
 
@@ -900,6 +1118,122 @@ withNodeSelectorTerms(nodeSelectorTerms)
 
 ```ts
 withNodeSelectorTermsMixin(nodeSelectorTerms)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms
+
+
+
+### fn spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.withMatchExpressions
+
+```ts
+withMatchExpressions(matchExpressions)
+```
+
+
+
+### fn spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.withMatchExpressionsMixin
+
+```ts
+withMatchExpressionsMixin(matchExpressions)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.withMatchFields
+
+```ts
+withMatchFields(matchFields)
+```
+
+
+
+### fn spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.withMatchFieldsMixin
+
+```ts
+withMatchFieldsMixin(matchFields)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchExpressions
+
+
+
+### fn spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchExpressions.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchExpressions.withOperator
+
+```ts
+withOperator(operator)
+```
+
+
+
+### fn spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchExpressions.withValues
+
+```ts
+withValues(values)
+```
+
+
+
+### fn spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchExpressions.withValuesMixin
+
+```ts
+withValuesMixin(values)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchFields
+
+
+
+### fn spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchFields.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchFields.withOperator
+
+```ts
+withOperator(operator)
+```
+
+
+
+### fn spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchFields.withValues
+
+```ts
+withValues(values)
+```
+
+
+
+### fn spec.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.nodeSelectorTerms.matchFields.withValuesMixin
+
+```ts
+withValuesMixin(values)
 ```
 
 
@@ -1138,6 +1472,50 @@ withPrivateKeyFile(privateKeyFile)
 
 ```ts
 withSecretName(secretName)
+```
+
+
+
+## obj spec.tolerations
+
+
+
+### fn spec.tolerations.withEffect
+
+```ts
+withEffect(effect)
+```
+
+
+
+### fn spec.tolerations.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.tolerations.withOperator
+
+```ts
+withOperator(operator)
+```
+
+
+
+### fn spec.tolerations.withTolerationSeconds
+
+```ts
+withTolerationSeconds(tolerationSeconds)
+```
+
+
+
+### fn spec.tolerations.withValue
+
+```ts
+withValue(value)
 ```
 
 
